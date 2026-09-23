@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mind Map MikroTik - Widyanti Eka Sari</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:
+linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px),
+linear-gradient(135deg,#06142E,#0B2447,#19376D);
+background-size:40px 40px,40px 40px,100% 100%;
+min-height:100vh;
+overflow-x:auto;
+color:white;
+}
+
+.header{
+text-align:center;
+padding:30px 20px;
+}
+
+.header h1{
+font-size:42px;
+font-weight:700;
+letter-spacing:2px;
+}
+
+.header p{
+color:#BFD7FF;
+margin-top:8px;
+}
+
+.map{
+position:relative;
+width:1300px;
+height:900px;
+margin:0 auto;
+}
+
+.center{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:250px;
+height:250px;
+border-radius:50%;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(15px);
+border:2px solid rgba(255,255,255,.2);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+box-shadow:0 0 40px rgba(0,153,255,.4);
+z-index:5;
+}
+
+.center h2{
+font-size:38px;
+}
+
+.center span{
+font-size:14px;
+color:#cfe3ff;
+}
+
+.card{
+position:absolute;
+width:260px;
+padding:18px;
+border-radius:20px;
+background:rgba(255,255,255,.10);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.15);
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+margin-bottom:10px;
+font-size:18px;
+color:#7EC8FF;
+}
+
+.card ul{
+padding-left:18px;
+font-size:14px;
+line-height:1.8;
+}
+
+/* posisi */
+.c1{top:40px;left:520px;}
+.c2{top:200px;right:40px;}
+.c3{bottom:200px;right:40px;}
+.c4{bottom:40px;left:520px;}
+.c5{bottom:200px;left:40px;}
+.c6{top:200px;left:40px;}
+
+/* garis */
+svg{
+position:absolute;
+width:100%;
+height:100%;
+z-index:1;
+}
+
+line{
+stroke:#4DB8FF;
+stroke-width:3;
+}
+
+.footer{
+text-align:center;
+padding:30px;
+color:#cfe3ff;
+font-size:15px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>MIND MAP MATERI MIKROTIK</h1>
+<p>Teknik Jaringan Komputer dan Telekomunikasi (TJKT)</p>
+</div>
+
+<div class="map">
+
+<svg>
+<line x1="650" y1="320" x2="650" y2="180"/>
+<line x1="760" y1="420" x2="1050" y2="300"/>
+<line x1="760" y1="500" x2="1050" y2="620"/>
+<line x1="650" y1="580" x2="650" y2="760"/>
+<line x1="540" y1="500" x2="250" y2="620"/>
+<line x1="540" y1="420" x2="250" y2="300"/>
+</svg>
+
+<div class="center">
+<h2>MIKROTIK</h2>
+<span>Router & Network Management</span>
+</div>
+
+<div class="card c1">
+<h3>📘 Pengertian</h3>
+<ul>
+<li>Sistem operasi jaringan berbasis Linux.</li>
+<li>Digunakan untuk mengelola jaringan komputer.</li>
+<li>Berfungsi sebagai router dan firewall.</li>
+</ul>
+</div>
+
+<div class="card c2">
+<h3>💻 Jenis MikroTik</h3>
+<ul>
+<li>RouterOS</li>
+<li>RouterBoard</li>
+<li>Cloud Hosted Router (CHR)</li>
+</ul>
+</div>
+
+<div class="card c3">
+<h3>🌐 Fungsi</h3>
+<ul>
+<li>Routing jaringan</li>
+<li>Firewall</li>
+<li>Hotspot</li>
+<li>VPN</li>
+<li>Bandwidth Management</li>
+</ul>
+</div>
+
+<div class="card c4">
+<h3>⚙️ Konfigurasi Dasar</h3>
+<ul>
+<li>IP Address</li>
+<li>DNS</li>
+<li>Gateway</li>
+<li>DHCP Server</li>
+<li>DHCP Client</li>
+</ul>
+</div>
+
+<div class="card c5">
+<h3>🚀 Fitur Utama</h3>
+<ul>
+<li>NAT</li>
+<li>Wireless</li>
+<li>Queue</li>
+<li>Load Balancing</li>
+<li>Monitoring</li>
+</ul>
+</div>
+
+<div class="card c6">
+<h3>🔒 Administrasi & Keamanan</h3>
+<ul>
+<li>Winbox</li>
+<li>WebFig</li>
+<li>Firewall Rules</li>
+<li>Backup Konfigurasi</li>
+<li>Update RouterOS</li>
+</ul>
+</div>
+
+</div>
+
+<div class="footer">
+Dibuat oleh <b>Widyanti Eka Sari</b> • XI TJKT • SMKN 5 Bone
+</div>
+
+</body>
+</html>
