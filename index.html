@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mind Map MikroTik</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#FFF8EE,#FDF3E7,#EAF4FF);
+    min-height:100vh;
+    overflow-x:auto;
+}
+
+.header{
+    text-align:center;
+    padding:30px 20px;
+}
+
+.header h1{
+    color:#123C69;
+    font-size:42px;
+    font-weight:700;
+}
+
+.header p{
+    color:#4B5563;
+    margin-top:8px;
+}
+
+.mindmap{
+    position:relative;
+    width:1200px;
+    height:900px;
+    margin:20px auto;
+}
+
+/* Lingkaran Tengah */
+.center{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#123C69,#1E5AA8);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(18,60,105,0.3);
+    border:8px solid rgba(255,255,255,.7);
+    z-index:5;
+}
+
+.center h2{
+    font-size:34px;
+}
+
+.center p{
+    font-size:14px;
+    opacity:.9;
+}
+
+/* Cabang */
+.branch{
+    position:absolute;
+    width:250px;
+    background:white;
+    border-radius:25px;
+    padding:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    border:2px solid #D6E8FF;
+    transition:.3s;
+}
+
+.branch:hover{
+    transform:translateY(-6px);
+}
+
+.branch h3{
+    color:#123C69;
+    margin-bottom:10px;
+    font-size:18px;
+}
+
+.branch ul{
+    padding-left:18px;
+    color:#374151;
+    font-size:14px;
+}
+
+.branch li{
+    margin:5px 0;
+}
+
+/* Posisi Cabang */
+.b1{top:40px;left:470px;}
+.b2{top:180px;right:40px;}
+.b3{bottom:180px;right:40px;}
+.b4{bottom:40px;left:470px;}
+.b5{bottom:180px;left:40px;}
+.b6{top:180px;left:40px;}
+
+/* Garis */
+svg{
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:1;
+}
+
+.line{
+    stroke:#6CA6FF;
+    stroke-width:4;
+    fill:none;
+    stroke-linecap:round;
+}
+
+.footer{
+    text-align:center;
+    padding:20px;
+    color:#64748B;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>MIND MAP MATERI MIKROTIK</h1>
+    <p>Teknik Jaringan Komputer dan Telekomunikasi (TJKT)</p>
+</div>
+
+<div class="mindmap">
+
+<svg>
+<path class="line" d="M600 220 Q600 260 600 340"/>
+<path class="line" d="M710 400 Q840 400 910 300"/>
+<path class="line" d="M710 500 Q840 500 910 620"/>
+<path class="line" d="M600 560 Q600 700 600 760"/>
+<path class="line" d="M490 500 Q360 500 290 620"/>
+<path class="line" d="M490 400 Q360 400 290 300"/>
+</svg>
+
+<div class="center">
+    <h2>MikroTik</h2>
+    <p>Router & Manajemen Jaringan</p>
+</div>
+
+<div class="branch b1">
+<h3>📘 Pengertian</h3>
+<ul>
+<li>Sistem operasi jaringan berbasis Linux.</li>
+<li>Digunakan untuk mengelola jaringan komputer.</li>
+<li>Berfungsi sebagai router dan firewall.</li>
+</ul>
+</div>
+
+<div class="branch b2">
+<h3>💻 Jenis MikroTik</h3>
+<ul>
+<li>RouterOS</li>
+<li>RouterBoard</li>
+<li>Cloud Hosted Router (CHR)</li>
+</ul>
+</div>
+
+<div class="branch b3">
+<h3>🌐 Fungsi</h3>
+<ul>
+<li>Routing jaringan</li>
+<li>Firewall</li>
+<li>Hotspot</li>
+<li>VPN</li>
+<li>Bandwidth Management</li>
+</ul>
+</div>
+
+<div class="branch b4">
+<h3>⚙️ Konfigurasi Dasar</h3>
+<ul>
+<li>IP Address</li>
+<li>DNS</li>
+<li>Gateway</li>
+<li>DHCP Server</li>
+<li>DHCP Client</li>
+</ul>
+</div>
+
+<div class="branch b5">
+<h3>🚀 Fitur Utama</h3>
+<ul>
+<li>NAT</li>
+<li>Wireless</li>
+<li>Queue</li>
+<li>Load Balancing</li>
+<li>Monitoring</li>
+</ul>
+</div>
+
+<div class="branch b6">
+<h3>🔒 Administrasi & Keamanan</h3>
+<ul>
+<li>Winbox</li>
+<li>WebFig</li>
+<li>Firewall Rules</li>
+<li>Backup Konfigurasi</li>
+<li>Update RouterOS</li>
+</ul>
+</div>
+
+</div>
+
+<div class="footer">
+SMKN 5 Bone • XI TJKT • Tahun Pelajaran 2026/2027
+</div>
+
+</body>
+</html>
